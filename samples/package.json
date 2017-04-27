@@ -1,0 +1,20 @@
+{
+  "name": "Joe Blog",
+  "status": "Active",
+  
+ "folder": {
+    "name": "LOTTERY"
+  },
+  "owner": {
+    "type": "User",
+    "name": "100/ARA/ARA"
+  },
+  "custom_type": {
+    "name": "Deployment"
+  },
+   "dynamic": {},
+  "application": {
+    "name": "Lottery"
+  }
+
+}

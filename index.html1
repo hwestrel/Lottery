@@ -1,0 +1,36 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="no-cache">
+	<title>Automic Lottery powered by ARA and RaspberryPi</title>
+	<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+	<div class="main_page">
+		<div class="page_header floating_element">
+			<img src="/icons/openlogo-75.png" alt="Automic" class="floating_element"/>
+			<span class="floating_element">Drone Lottery</span>
+		</div>
+		<div class="content_section floating_element">
+			<div class="section_header section_header_red">Take a picure and Poke ARA !</div>
+			<div class="content_section_text">
+				<table><tr>
+					<td width="680"><p><img src="/icons/face.jpg" alt="No picture." class="floating_element"/> </p> </td>
+					<td width="120">
+						<p>
+                                                <form action="/cgi-bin/index.py" method="GET">
+                                                        <input type="hidden" name="action" value="takePicture">
+                                                        <input type="Submit" value="1. Take new picture">
+                                                </form>
+							</p><br/>
+						<form action="/cgi-bin/index.py" method="GET">
+							<input type="hidden" name="action" value="send">
+							<input type="Submit" value="2. Request ARA to fetch it">
+						</form>
+						<br/>
+						<form action="/cgi-bin/index.py" method="GET">
+						<input type="hidden" name="action" value="Refresh">
+						<input type="Submit" value="Refresh">
+						</form>
+						
+						</p>

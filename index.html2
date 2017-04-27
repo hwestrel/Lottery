@@ -1,0 +1,29 @@
+						<!--<div id="status">xxx</div>
+						<p><button onclick="myReload()" type="button">Refresh</button></p>
+						<p><button onclick="loadStatus()" type="button">Update</button></p> -->
+					</td>
+				</tr></table>
+			</div> 
+		</div>
+	</div>
+ 
+<script>
+function myReload() {
+	location.reload(true)
+}
+<!-- function loadStatus() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("status").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "status.txt", true);
+  xhttp.send();
+} -->
+
+</script>
+
+</body>
+</html>

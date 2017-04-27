@@ -1,0 +1,62 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Automic Lottery powered by ARA and RaspberryPi</title>
+	<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+	<div class="main_page">
+		<div class="page_header floating_element">
+			<img src="/icons/openlogo-75.png" alt="Automic" class="floating_element"/>
+			<span class="floating_element">Quadcopter Drone Lottery</span>
+		</div>
+		<div class="content_section floating_element">
+			<div class="section_header section_header_red">Picture OK ?</div>
+			<div class="content_section_text">
+				<table><tr>
+					<td width="680"><p><img src="/icons/face.jpg" alt="Press and release the button on the RaspberryPi to take a new picture." class="floating_element"/> </p> </td>
+					<td width="120">
+						<p><form action="/cgi-bin/index.py" method="GET">
+							<input type="hidden" name="action" value="send">
+							Yes, participate: 
+							<input type="Submit" value="submit">
+						</form>
+						<br/><p>
+						<form action="/cgi-bin/index.py" method="GET">
+						<input type="hidden" name="action" value="Refresh">
+						<input type="Submit" value="Refresh">
+						</form>
+						
+						</p>
+						
+						
+						<!--<div id="status">xxx</div>
+						<p><button onclick="myReload()" type="button">Refresh</button></p>
+						<p><button onclick="loadStatus()" type="button">Update</button></p> -->
+					</td>
+				</tr></table>
+			</div> 
+		</div>
+	</div>
+ 
+<script>
+function myReload() {
+	location.reload()
+}
+function loadStatus() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("status").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "status.txt", true);
+  xhttp.send();
+}
+
+</script>
+
+</body>
+</html>
+
