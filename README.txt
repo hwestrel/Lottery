@@ -6,7 +6,9 @@ doc root  /var/www/html
 
 ToDo to set Lottery on PI:
 
-#1 Git clone Lottery /or unzip to /home/pi/Lottery
+#1 Git clone Lottery or unzip to /home/pi/Lottery
+git clone "https://github.com/hwestrel/Lottery.git"
+
 #2 Create folder sym links
 cd /usr/share/apache2/icons
 sudo ln -s /home/pi/Lottery/face.jpg face.jpg
