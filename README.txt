@@ -82,10 +82,19 @@ ifconfig wlan0
 --------------------------------------------------
 git clone "https://github.com/hwestrel/Lottery.git"
 
+cd ~/Lottery
+sudo chown www-data:www-data log.txt
+sudo chown root:root cgi/index.py
+
+
 #2 Create folder sym links
 cd /usr/share/apache2/icons
 sudo ln -s /home/pi/Lottery/face.jpg face.jpg
-sudo ln -s /home/pi/Lottery/winner.jpg winner.jpg 
+sudo ln -s /home/pi/Lottery/winner.jpg winner.jpg
+sudo ln -s /home/pi/Lottery/Quadcopter.jpg Quadcopter.jpg
+sudo mv openlogo-75.png openlogo-75.png_old
+sudo ln -s  /home/pi/Lottery/Automic-Logotype-Black.png openlogo-75.png
+
 
 cd /usr/lib/cgi-bin
 sudo ln -s /home/pi/Lottery/cgi/index.py index.py
