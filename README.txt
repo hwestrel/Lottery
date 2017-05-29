@@ -6,6 +6,35 @@ doc root  /var/www/html
 
 ToDo to set Lottery on PI:
 
+#0   
+sudo raspi-config
+ change pi password
+ set hostname
+ set boot option
+ set local (se UTF8)
+ enable camera, ssh
+ advance options, expand filesystem
+ update
+sudo reboot 
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install git
+
+Setup WiFi
+https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md
+sudo iwlist wlan0 scan
+wpa_passphrase "HIF"
+network={
+        ssid="your ssis"
+        #psk="your passphrase"
+        psk="your generated psk key"
+}
+
+sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+Note that, although wpa_passphrase returns the psk value unquoted, the  wpa_supplicant.conf file requires this value to be quoted, otherwise your Pi will not connect to your network.
+
+
+
 #1 Git clone Lottery or unzip to /home/pi/Lottery
 git clone "https://github.com/hwestrel/Lottery.git"
 
