@@ -1,3 +1,4 @@
+#######################################
 System folders on the PI:
 Image folder  /usr/share/apache2/icons
 cgi-bin folder  /usr/lib/cgi-bin
